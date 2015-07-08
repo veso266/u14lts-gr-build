@@ -129,8 +129,9 @@ sudo ldconfig
 
 
 ## To update: Run the uninstall above, then uncomment and paste as above
+#cd SDR
 #cd rtlsdr/build
-#rm -rf *
+#rm -rf ../build/*
 #git pull
 #cmake ../ -DINSTALL_UDEV_RULES=ON -DDETACH_KERNEL_DRIVER=ON
 #make -j 4
@@ -138,7 +139,7 @@ sudo ldconfig
 #cd ../../
 
 #cd hackrf/host/build
-#rm -rf *
+#rm -rf ../build/*
 #git pull
 #cmake ../
 #make -j 4
@@ -146,7 +147,7 @@ sudo ldconfig
 #cd ../../../
 
 #cd uhd/host/build
-#rm -rf *
+#rm -rf ../build/*
 #git pull
 #cmake ../
 #make -j 4
@@ -154,7 +155,7 @@ sudo ldconfig
 #cd ../../../
 
 #cd gnuradio/build
-#rm -rf *
+#rm -rf ../build/*
 #git pull --recurse-submodules=on
 #git submodule update
 #cmake ../
@@ -163,7 +164,7 @@ sudo ldconfig
 #cd ../../
 
 #cd iqbal/build
-#rm -rf *
+#rm -rf ../build/*
 #git pull --recurse-submodules=on
 #git submodule update
 #cmake ../
@@ -172,7 +173,7 @@ sudo ldconfig
 #cd ../../
 
 #cd osmosdr/build
-#rm -rf *
+#rm -rf ../build/*
 #git pull
 #cmake ../
 #make -j 4
@@ -180,12 +181,15 @@ sudo ldconfig
 #cd ../../
 
 #cd gqrx/build
-#rm -rf *
+#rm -rf ../build/*
 #git pull
 #qmake ../
 #make -j 4
 #sudo make install
 #cd ../../
 
+#sudo /usr/local/lib/uhd/utils/uhd_images_downloader.py
+#sudo udevadm control --reload-rules
 #sudo ldconfig
+
 
