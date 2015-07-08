@@ -38,7 +38,7 @@ cd rtlsdr/
 mkdir build
 cd build
 cmake ../ -DINSTALL_UDEV_RULES=ON -DDETACH_KERNEL_DRIVER=ON
-make -j 8 
+make -j 4
 sudo make install
 cd ../../
 
@@ -47,7 +47,7 @@ cd hackrf/host
 mkdir build
 cd build
 cmake ../
-make -j 8
+make -j 4
 sudo make install
 cd ../../../
 
@@ -57,7 +57,7 @@ cd uhd/host
 mkdir build
 cd build
 cmake ../ -DENABLE_E100=ON -DENABLE_E300=ON
-make -j 8
+make -j 4
 sudo make install
 cd ../../../
 
@@ -71,7 +71,7 @@ git submodule update
 mkdir build
 cd build
 cmake ../
-make -j 8
+make -j 4
 sudo make install
 cd ../../
 
@@ -82,7 +82,7 @@ git submodule update
 mkdir build
 cd build
 cmake ../
-make -j 8
+make -j 4
 sudo make install
 cd ../../
 
@@ -90,7 +90,7 @@ cd osmosdr
 mkdir build
 cd build
 cmake ../
-make -j 8
+make -j 4
 sudo make install
 cd ../../
 
@@ -98,7 +98,7 @@ cd gqrx
 mkdir build
 cd build
 qmake ../
-make -j 8
+make -j 4
 sudo make install
 cd ../../
 
