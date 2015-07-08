@@ -106,7 +106,7 @@ cd ../../
 sudo /usr/local/lib/uhd/utils/uhd_images_downloader.py
 
 ## This is necessay to use UHD as a normal user
-sudo cp SDR/uhd/host/utils/uhd-usrp.rules /etc/udev/rules.d/
+sudo cp uhd/host/utils/uhd-usrp.rules /etc/udev/rules.d/
 
 ## This loads all three SDRs udev rules active, which allows them
 ## to be used without root
