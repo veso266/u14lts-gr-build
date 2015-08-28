@@ -122,6 +122,13 @@ cd /usr/local/libexec/gnuradio/
 ## This makes sure various programs can find their correct libraries.
 sudo ldconfig
 
+# Install GQRX Launcher Icon
+	sudo mkdir -p /usr/local/share/gqrx/freedesktop
+	cd /usr/local/share/gqrx/freedesktop
+	sudo cp ~/SpriteRadioTmp/gqrx/icons/gqrx.svg gqrx.svg
+	sudo sh -c 'echo "[Desktop Entry]\nVersion=1.0\nType=Application\nName=GQRX\nExec=gqrx\nCategories=Development;\nIcon=/usr/local/share/gqrx/freedesktop/gqrx.svg" >> gqrx.desktop'
+	sudo desktop-file-install gqrx.desktop
+
 
 ## TO uninstall uncomment (remove the # mark below) and paste into a terminal 
 ## in the same directory as this script
