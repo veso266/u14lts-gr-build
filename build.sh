@@ -103,10 +103,10 @@ sudo make install
 cd ../../
 
 ## This is necessary to load UHD firmware
-sudo /usr/local/lib/uhd/utils/uhd_images_downloader.py
+## sudo /usr/local/lib/uhd/utils/uhd_images_downloader.py
 
 ## This is necessay to use UHD as a normal user
-sudo cp uhd/host/utils/uhd-usrp.rules /etc/udev/rules.d/
+## sudo cp uhd/host/utils/uhd-usrp.rules /etc/udev/rules.d/
 
 ## This loads all three SDRs udev rules active, which allows them
 ## to be used without root
@@ -114,6 +114,14 @@ sudo udevadm control --reload-rules
 
 ## This makes sure various programs can find their correct libraries.
 sudo ldconfig
+
+## This installs GNU Radio Companion Icon set
+cd /usr/local/libexec/gnuradio/
+./grc_setup_freedesktop install
+
+## This makes sure various programs can find their correct libraries.
+sudo ldconfig
+
 
 ## TO uninstall uncomment (remove the # mark below) and paste into a terminal 
 ## in the same directory as this script
